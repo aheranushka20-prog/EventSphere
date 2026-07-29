@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-login-page {
+  min-height: 100vh;
+  background: #f7f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.admin-login-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* BRANDING */
+
+.admin-login-brand {
+  background: #171525;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.admin-brand-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.admin-brand-logo span {
+  color: #9b7cff;
+}
+
+.brand-content {
+  max-width: 500px;
+  margin: auto 0;
+}
+
+.brand-label {
+  color: #9b7cff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.brand-content h1 {
+  font-size: clamp(36px, 4vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 0 0 25px;
+}
+
+.brand-description {
+  color: #aaa7b8;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 410px;
+}
+
+.brand-footer {
+  color: #777386;
+  font-size: 12px;
+}
+
+/* LOGIN SIDE */
+
+.admin-login-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.login-icon {
+  width: 58px;
+  height: 58px;
+  background: #eee9ff;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.login-label {
+  color: #7657e8;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.admin-login-card h2 {
+  color: #1f1f2e;
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+.login-subtitle {
+  color: #858394;
+  font-size: 14px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ERROR */
+
+.login-error {
+  background: #fff0f0;
+  border: 1px solid #ffd3d3;
+  color: #c93636;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-input-group label {
+  color: #3e3c4c;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.login-input-group input {
+  width: 100%;
+  border: 1px solid #dedce7;
+  background: white;
+  border-radius: 11px;
+  padding: 15px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.login-input-group input:focus {
+  border-color: #7657e8;
+  box-shadow: 0 0 0 4px #eee9ff;
+}
+
+/* PASSWORD */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 70px;
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #7657e8;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BUTTON */
+
+.admin-login-button {
+  border: none;
+  background: #7657e8;
+  color: white;
+  padding: 16px;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s ease;
+}
+
+.admin-login-button:hover {
+  background: #6244d1;
+  transform: translateY(-2px);
+}
+
+.admin-login-button span {
+  font-size: 18px;
+}
+
+/* BACK LINK */
+
+.back-home-link {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #858394;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.back-home-link:hover {
+  color: #7657e8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .admin-login-container {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-login-brand {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .brand-content {
+    margin: 50px 0 20px;
+  }
+
+  .brand-content h1 {
+    font-size: 38px;
+  }
+
+  .brand-footer {
+    display: none;
+  }
+
+  .admin-login-card-wrapper {
+    padding: 45px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .admin-login-brand {
+    min-height: 260px;
+  }
+
+  .brand-content h1 {
+    font-size: 32px;
+  }
+
+  .admin-login-card h2 {
+    font-size: 32px;
+  }
+}

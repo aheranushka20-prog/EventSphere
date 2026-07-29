@@ -1,0 +1,102 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7fb;
+  color: #1f1f2e;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   DARK MODE GLOBAL
+========================= */
+
+body.dark-mode {
+  background: #12111a;
+  color: #f5f5f5;
+}
+
+/* Common dark backgrounds */
+
+body.dark-mode section,
+body.dark-mode .event-details,
+body.dark-mode .registration-form,
+body.dark-mode .registration-success,
+body.dark-mode .event-card {
+  background: #1b1926;
+  color: #f5f5f5;
+}
+
+/* Common text */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+  color: inherit;
+}
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #252232;
+  color: white;
+  border-color: #403b52;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa6b8;
+}
+
+/* Buttons */
+
+body.dark-mode button {
+  transition: 0.3s ease;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7657e8;
+  border-radius: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #181620;
+}

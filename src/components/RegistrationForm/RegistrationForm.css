@@ -1,0 +1,327 @@
+/* =========================
+   REGISTRATION FORM
+========================= */
+
+.registration-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.registration-form h2 {
+  color: #1f1f2e;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.registration-form input {
+  width: 100%;
+  padding: 15px 16px;
+
+  border: 1px solid #e4e2eb;
+  border-radius: 10px;
+
+  background: #faf9ff;
+  color: #1f1f2e;
+
+  font-size: 14px;
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.registration-form input::placeholder {
+  color: #9996a5;
+}
+
+.registration-form input:focus {
+  border-color: #7657e8;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(118, 87, 232, 0.1);
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.registration-form button {
+  margin-top: 8px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #7657e8;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-form button:hover {
+  background: #6243d3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 87, 232, 0.25);
+}
+
+.registration-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.registration-error {
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #d93636;
+  font-size: 13px;
+}
+
+/* =========================
+   SUCCESS TICKET
+========================= */
+
+.registration-success {
+  width: 100%;
+  padding: 30px;
+
+  text-align: center;
+
+  background: #f7fff9;
+  border: 1px solid #ccebd7;
+  border-radius: 16px;
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 15px;
+
+  background: #dff6e8;
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+.registration-success h2 {
+  color: #228b4d;
+  margin-bottom: 8px;
+}
+
+.success-subtitle {
+  color: #777482;
+  margin-bottom: 22px;
+}
+
+/* =========================
+   TICKET CARD
+========================= */
+
+.ticket-card {
+  margin: 20px 0;
+  padding: 22px;
+
+  text-align: left;
+
+  background: white;
+  border: 1px dashed #7657e8;
+  border-radius: 14px;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 15px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid #eeeafc;
+}
+
+.ticket-header h3 {
+  color: #1f1f2e;
+  margin: 0;
+  font-size: 18px;
+}
+
+.ticket-logo {
+  color: #7657e8;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ticket-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ticket-info p {
+  margin: 0;
+  color: #777482;
+  font-size: 13px;
+}
+
+.ticket-info strong {
+  display: block;
+  margin-top: 5px;
+  color: #1f1f2e;
+  font-size: 14px;
+}
+
+/* =========================
+   SUCCESS ACTIONS
+========================= */
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.download-ticket-btn,
+.register-again-btn {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.download-ticket-btn {
+  background: #7657e8;
+  color: white;
+}
+
+.download-ticket-btn:hover {
+  background: #6243d3;
+  transform: translateY(-2px);
+}
+
+.register-again-btn {
+  background: #eee9ff;
+  color: #7657e8;
+}
+
+.register-again-btn:hover {
+  background: #ddd5ff;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .registration-form h2 {
+  color: white;
+}
+
+body.dark-mode .registration-form input {
+  background: #252232;
+  border-color: #403b52;
+  color: white;
+}
+
+body.dark-mode .registration-form input::placeholder {
+  color: #aaa6b8;
+}
+
+body.dark-mode .registration-form input:focus {
+  background: #1f1d2b;
+  border-color: #a894ff;
+}
+
+body.dark-mode .registration-error {
+  background: #351f25;
+  color: #ff9999;
+}
+
+body.dark-mode .registration-success {
+  background: #182820;
+  border-color: #2e6844;
+}
+
+body.dark-mode .success-subtitle {
+  color: #aaa6b8;
+}
+
+body.dark-mode .ticket-card {
+  background: #1b1926;
+  border-color: #a894ff;
+}
+
+body.dark-mode .ticket-header {
+  border-bottom-color: #302d3d;
+}
+
+body.dark-mode .ticket-header h3 {
+  color: white;
+}
+
+body.dark-mode .ticket-info p {
+  color: #aaa6b8;
+}
+
+body.dark-mode .ticket-info strong {
+  color: white;
+}
+
+body.dark-mode .register-again-btn {
+  background: #302b45;
+  color: #a894ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .registration-success {
+    padding: 22px;
+  }
+
+  .registration-form h2 {
+    font-size: 21px;
+  }
+
+  .ticket-info {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-header {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .download-ticket-btn,
+  .register-again-btn {
+    width: 100%;
+  }
+}

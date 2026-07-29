@@ -1,0 +1,111 @@
+/* =========================
+   APP GLOBAL STYLES
+========================= */
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth theme transitions */
+
+body,
+button,
+input,
+textarea,
+select,
+section,
+div,
+nav {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body {
+  background: #f7f7fb;
+  color: #1f1f2e;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+  background: #12111a;
+  color: #f5f5f5;
+}
+
+/* Common dark cards and containers */
+
+body.dark-mode .event-card,
+body.dark-mode .event-details,
+body.dark-mode .registration-form,
+body.dark-mode .registration-success,
+body.dark-mode .event-info {
+  background: #1b1926;
+  color: #f5f5f5;
+}
+
+/* Headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #ffffff;
+}
+
+/* Paragraphs */
+
+body.dark-mode p {
+  color: #c9c5d5;
+}
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #252232;
+  color: white;
+  border-color: #403b52;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa6b8;
+}
+
+/* Links */
+
+body.dark-mode a {
+  color: #a894ff;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}

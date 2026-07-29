@@ -1,0 +1,83 @@
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-bar {
+  width: 100%;
+  position: relative;
+}
+
+.search-bar::before {
+  content: "🔍";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  z-index: 1;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 17px 20px 17px 55px;
+
+  border: 2px solid transparent;
+  border-radius: 14px;
+
+  background: white;
+  color: #1f1f2e;
+
+  font-size: 16px;
+  outline: none;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transition: all 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #9996a5;
+}
+
+.search-bar input:focus {
+  border-color: #c4b5fd;
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.18),
+    0 0 0 4px rgba(196, 181, 253, 0.2);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .search-bar input {
+  background: #252232;
+  color: white;
+  border-color: #403b52;
+}
+
+body.dark-mode .search-bar input::placeholder {
+  color: #aaa6b8;
+}
+
+body.dark-mode .search-bar input:focus {
+  border-color: #a894ff;
+  box-shadow:
+    0 0 0 4px rgba(168, 148, 255, 0.15);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .search-bar input {
+    padding: 15px 15px 15px 48px;
+    font-size: 14px;
+  }
+
+  .search-bar::before {
+    left: 16px;
+    font-size: 16px;
+  }
+}

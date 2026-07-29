@@ -1,0 +1,201 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 7%;
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #6d28d9,
+      #8b5cf6,
+      #a78bfa
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background circles */
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 400px;
+  height: 400px;
+  top: -180px;
+  left: -150px;
+}
+
+.hero::after {
+  width: 500px;
+  height: 500px;
+  bottom: -280px;
+  right: -180px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Small label */
+
+.hero-label {
+  font-size: 12px !important;
+  letter-spacing: 3px;
+  font-weight: bold;
+  opacity: 0.85;
+  margin-bottom: 22px !important;
+}
+
+/* Main heading */
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+/* Description */
+
+.hero-description {
+  max-width: 700px;
+  margin: 0 auto 30px !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Search area */
+
+.hero-search {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-btn {
+  margin-top: 30px;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 12px;
+
+  background: white;
+  color: #6d28d9;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.explore-btn span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.explore-btn:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .hero {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.25),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(109, 40, 217, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #181329,
+      #251847,
+      #34215d
+    );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .hero-label {
+    font-size: 10px !important;
+    letter-spacing: 2px;
+  }
+
+  .explore-btn {
+    font-size: 15px;
+    padding: 13px 23px;
+  }
+}

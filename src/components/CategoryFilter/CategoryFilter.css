@@ -1,0 +1,78 @@
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* Category buttons */
+
+.categories button {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+
+.categories button:hover {
+  background: white;
+  color: #6d28d9;
+  transform: translateY(-2px);
+}
+
+/* Active category */
+
+.categories button.active {
+  background: white;
+  color: #6d28d9;
+  border-color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode .categories button {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ddd9eb;
+}
+
+body.dark-mode .categories button:hover,
+body.dark-mode .categories button.active {
+  background: #a894ff;
+  color: #171525;
+  border-color: #a894ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .categories {
+    gap: 8px;
+  }
+
+  .categories button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
