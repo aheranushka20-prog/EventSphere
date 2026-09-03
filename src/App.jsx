@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/navbar.jsx";
 
 import Home from "./pages/Home/Home";
 import EventList from "./pages/EventList/EventList";
